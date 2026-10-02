@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "pixel-agents"
+version: "1.4.1"
+description: "Pixel art office simulator and visual orchestrator where AI coding agents come to life as animated characters with real-time activity tracking."
+author: "pablodelucca & Pixel Agents Contributors"
+license: "MIT"
+metadata:
+  domain: "Developer Tools / Multi-Agent Visual Orchestration & Workspace Gamification"
+  category: "Developer Tools"
+  framework: "Pixel Agents Core / VS Code Extension API / React Webview / WebSocket Server"
+  language: "TypeScript"
+skills:
+  - "agent-activity-tracking"
+  - "virtual-office-orchestration"
+  - "agent-team-lifecycle-supervision"
+  - "cross-environment-hook-integration"
+tools:
+  - "activity-state-dispatcher"
+  - "office-grid-manager"
+  - "desk-allocator"
+  - "notification-chime-emitter"
+  - "hook-telemetry-receiver"

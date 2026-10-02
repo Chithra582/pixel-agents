@@ -1,0 +1,28 @@
+name: "hook-telemetry-receiver"
+description: "Receives raw CLI and terminal hook events, normalizes payloads, and updates webview state stores."
+input_schema:
+  type: object
+  properties:
+    event_type:
+      type: string
+      enum:
+        - "agent_start"
+        - "tool_call"
+        - "agent_wait"
+        - "agent_stop"
+        - "subagent_spawn"
+      description: "Hook event category."
+    source_env:
+      type: string
+      enum:
+        - "vscode_terminal"
+        - "cli_standalone"
+        - "claude_hook"
+      description: "Originating environment."
+    payload:
+      type: object
+      description: "Event payload containing agent ID, tool name, and metadata."
+  required:
+    - event_type
+    - source_env
+    - payload

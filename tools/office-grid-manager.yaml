@@ -1,0 +1,25 @@
+name: "office-grid-manager"
+description: "Controls office layout matrix, room areas, furniture slots, and pathfinding collision maps."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "get_layout"
+        - "update_tile"
+        - "place_furniture"
+        - "bake_collisions"
+        - "export_layout"
+      description: "Office grid management action."
+    layout_data:
+      type: object
+      description: "Office layout configuration payload."
+    x:
+      type: integer
+      description: "Tile grid X coordinate."
+    y:
+      type: integer
+      description: "Tile grid Y coordinate."
+  required:
+    - action

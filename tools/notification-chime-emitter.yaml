@@ -1,0 +1,27 @@
+name: "notification-chime-emitter"
+description: "Triggers visual speech bubbles, alert banners, and audio chimes upon agent permission or input prompts."
+input_schema:
+  type: object
+  properties:
+    agent_id:
+      type: string
+      description: "Identifier of triggering agent."
+    notification_type:
+      type: string
+      enum:
+        - "waiting_input"
+        - "permission_required"
+        - "turn_finished"
+        - "error_encountered"
+      description: "Classification of notification event."
+    message:
+      type: string
+      description: "Speech bubble message or prompt snippet."
+    play_sound:
+      type: boolean
+      description: "Whether to emit an audible chime."
+      default: true
+  required:
+    - agent_id
+    - notification_type
+    - message

@@ -1,0 +1,25 @@
+name: "activity-state-dispatcher"
+description: "Emits real-time agent activity states (thinking, editing, reading, executing, idle, waiting_for_input)."
+input_schema:
+  type: object
+  properties:
+    agent_id:
+      type: string
+      description: "Unique identifier of target agent character."
+    activity_state:
+      type: string
+      enum:
+        - "idle"
+        - "walking"
+        - "typing"
+        - "reading"
+        - "executing"
+        - "waiting_for_input"
+        - "error"
+      description: "Visual activity state to assign."
+    tool_detail:
+      type: string
+      description: "Optional brief description of active tool or command."
+  required:
+    - agent_id
+    - activity_state

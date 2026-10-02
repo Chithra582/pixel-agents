@@ -1,0 +1,17 @@
+name: "desk-allocator"
+description: "Assigns available desks and workspace areas to incoming agent instances and sub-agents."
+input_schema:
+  type: object
+  properties:
+    agent_id:
+      type: string
+      description: "Identifier of agent requesting desk assignment."
+    preferred_area:
+      type: string
+      description: "Designated office area (e.g., Frontend, Backend, DevOps)."
+    is_subagent:
+      type: boolean
+      description: "Whether the agent is an ephemeral sub-agent."
+      default: false
+  required:
+    - agent_id
